@@ -1,0 +1,58 @@
+GET http://localhost:3000
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTgzMzkxNTQsImV4cCI6MTcxODM0Mjc1NCwiYXVkIjoiNjY2YjRmZjlkZWYxYjFmOTMzYzBiODNlIiwiaXNzIjoiamVldmVlLmNvbSJ9.87XrkOqh9jPCaOZywERJbrKCHuSajLm2_VZh56l3W0I
+###
+//register route
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "dhir@gmail.com",
+    "password": "password123"
+}
+
+###
+//login route
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "dhir@gmail.com",
+    "password": "password123"
+}
+
+###
+//refresh token route
+POST http://localhost:3000/api/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjAwMzIyMTIsImV4cCI6MTc1MTU4OTgxMiwiYXVkIjoiNjY4NTliMzgwM2ExZWI4NzU5MjhkN2QzIiwiaXNzIjoiamVldmVlLmNvbSJ9.K3NHzjfq5Jy_u3gvsJNCAkOm8G251VzgLmoRbyX9Goc"
+}
+###
+//logout route
+
+DELETE http://localhost:3000/api/auth/logout
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTgzMDc4MTEsImV4cCI6MTc0OTg2NTQxMSwiYXVkIjoiNjY2YjFlN2VlYjEzYjlhYjU3NjNjNTgxIiwiaXNzIjoiamVldmVlLmNvbSJ9.cSO-tQWGsnC3rNxMbRy9xjxLoA0MR4xlw5id269SKfw"
+}
+###
+//protected route
+GET http://localhost:3000/API/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTgzMzg0NDYsImV4cCI6MTcxODM0MjA0NiwiYXVkIjoiNjY2YjRmZjlkZWYxYjFmOTMzYzBiODNlIiwiaXNzIjoiamVldmVlLmNvbSJ9.691IBkDYRMfn-7IWBF7cR_X2kfulz9U7dZWCtQ5kj2Y
+
+###
+POST http://localhost:3000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjAwMzIyMTIsImV4cCI6MTcyMDAzNTgxMiwiYXVkIjoiNjY4NTliMzgwM2ExZWI4NzU5MjhkN2QzIiwiaXNzIjoiamVldmVlLmNvbSJ9.RZyl5MWQE-UFO077gC9gl0cPp-XuT_qodDYUrwa9lwM
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Description 1",
+    "price": 100,
+    "stock_quantity": 10
+}
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MTgzMzg0NDYsImV4cCI6MTc0OTg5NjA0NiwiYXVkIjoiNjY2YjRmZjlkZWYxYjFmOTMzYzBiODNlIiwiaXNzIjoiamVldmVlLmNvbSJ9.IK3R9AtKhjXpyLBFhpFYga4jCi9rfsGOwZDt2oxoByc
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjAwMzIwOTYsImV4cCI6MTcyMDAzNTY5NiwiYXVkIjoiNjY4NTliMzgwM2ExZWI4NzU5MjhkN2QzIiwiaXNzIjoiamVldmVlLmNvbSJ9.Tr9s2e_F54CV_Tjz6RNucSz5vxTrmZI8MqIU1r8jmiE
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjAwMzIyMTIsImV4cCI6MTcyMDAzNTgxMiwiYXVkIjoiNjY4NTliMzgwM2ExZWI4NzU5MjhkN2QzIiwiaXNzIjoiamVldmVlLmNvbSJ9.RZyl5MWQE-UFO077gC9gl0cPp-XuT_qodDYUrwa9lwM
